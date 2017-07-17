@@ -1,0 +1,8 @@
+source("https://rubygems.org")
+gem('sinatra')
+gem('sinatra-contrib')
+gem('pry')
+gem('pg')
+gem('capybara')
+gem('sinatra-activerecord')
+gem('rake')
