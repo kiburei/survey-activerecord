@@ -1,4 +1,4 @@
-delevopment:
+development:
   adapter: postgresql
   database: bunge_development
 
