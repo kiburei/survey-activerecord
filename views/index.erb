@@ -1,11 +1,24 @@
 <h3>Bunge La Wananchi</h3>
-<p>This is an open platform for te public to discuss openly on government issues, give views, critisize and suggest possible solutions.
+<p>This is an open platform for the public to run their own surveys, poltical or social, and deduce meaninful knowledge from these reults.
 </p>
 
-<h4>Today's Hot Topics</h4>
+<h4>Today's Survey</h4>
 
-<form class="" action="/topics" method="post">
-  <label for="topic">New Topic</label>
-  <input type="text" name="topic" id="topic">
-  <button type="button" name="button">Post Topic</button>
+<form class="" action="/questions" method="post">
+  <label for="question">New Survey</label>
+  <input type="text" name="question" id="question" required="">
+  <button class="btn waves-effect waves-light" type="submit">Post Survey</button>
 </form>
+
+<div class="card">
+  <% if @questions.any? %>
+    <% @questions.each do |question| %>
+      <ul>
+        <li><a href="/questions/<%=question.id%>"><%= question.question %></a>
+        </li>
+      </ul>
+    <% end %>
+  <% else %>
+    <p>No Surveys Open Today</p>
+  <% end %>
+</div>
