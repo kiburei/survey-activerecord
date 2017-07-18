@@ -1,0 +1,7 @@
+delevopment:
+  adapter: postgresql
+  database: bunge_development
+
+test:
+  adapter: postgresql
+  database: bunge_test
